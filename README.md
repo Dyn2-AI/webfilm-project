@@ -6,7 +6,7 @@ Sebuah proyek website streaming film sederhana yang dibangun dengan teknologi mo
 - 🎥 Streaming film & serial TV
 - 🔍 Pencarian judul film berdasarkan kategori
 - 📌 Kategori & rekomendasi
-- 💬 Feddbacl
+- 💬 FeddbacK
 
 ## Teknologi yang Digunakan 🛠️
 - **Frontend**: HTML+CSS
