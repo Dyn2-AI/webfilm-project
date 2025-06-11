@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--navigation-->
+	<nav>
+		<!--logo-->
+		<a href="series.html" class="logo">
+			<img src="image/logo.png">
+		</a>
+		<!--menu btn-->
+		<label class="menu-icon" for="menu-btn">
+			<span class="nav-icon"></span>
+		</label>
+	</nav>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Trailernya</title>
+	<link rel="stylesheet" type="text/css" href="css/trailer.css"/>
+	<link rel="stylesheet" type="text/css" href="css/lightslider.css"/>
+	<script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+	<script type="text/javascript" src="js/trailervide.js"></script>
+</head>
+<body>
+<div id = "container">
+
+<section id="vid">
+		<iframe width="80%" height="315" src="https://www.youtube.com/embed/FpluY7qWhfI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<hr color="white" width="100%"></hr>
+	<h1 id = judul>TOKYO REVENGER - Chibi Ribe Sub Indonesia</h1>
+</br>
+<div id="rate">
+<span style="color: white;">4.0</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+</div>
+<div class="genre">
+	<span class="gen">Genre :</span>
+	<span>Comedy</span>
+</div>
+<div class="deskripsi">
+<span class="gen">Description :</span>
+	<span class="gens">Hanagaki Takemichi merupakan pekerja sambilan yang merasa bahwa dirinya pecundang selama hidupnya. Dia hanya mempunya satu pacar selama hidupnya yang bernama Tachibana Hinata.Namun, tidak lama kemudian, dia mengetahui kabar bahwa Tachibana terbunuh karena terlibat perseturuan pada geng. </span>
+</div>
+</div>
+<div id = "episode">
+<section id="latest">
+	<h2 class="latest-heading">Episode</h2>
+		<!--slider-->
+		<ul id="autoWidth2" class="cs-hidden">
+
+		</ul>
+	</section>
+</body>
+		<script type="text/javascript" src="js/lightslider.js" ></script>
+	<!--script slider-->
+	<script >
+		$(document).ready(function() {
+        $('#autoWidth,#autoWidth2').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+            } 
+        });  
+      });
+	</script>
+</div>
+</html>

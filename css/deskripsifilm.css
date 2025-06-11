@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Poppins' , sans-serif;
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 100px;
+	z-index: 1000;
+}
+
+header .logo{
+	max-width: 120px;
+}
+header .toogle{
+	max-width: 60px;
+	cursor: pointer;
+}
+header .logo img,
+header .toogle img{
+	max-width: 100%;
+}
+
+.banner{
+	position: absolute;
+	width: 100%;
+	min-height: 100vh;
+	padding: 0 100px;
+	background-image: url(../image/DEKNY.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.banner .content{
+	max-width: 550px;
+}
+.banner .content h2{
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 2.5rem;
+	letter-spacing: 0.1rem;
+	color: white;
+}
+.banner .content h2 span{
+	font-weight: 800;
+}
+.banner .content p{
+	font-size: 1.2rem;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	line-height: 1.5em;
+	color: white;
+	margin: 15px 0 35px;
+}
+
+.banner .content a img{
+	margin: 10px;
+	max-width: 60px;
+}
+.play{
+	position: relative;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 1.2rem;
+}
+.slide{
+	position: absolute;
+	bottom: 30px;
+	left: 80px;
+	width: 250px;
+	height: 150px;
+	background: url(../image/CKNY.jpg);
+	background-size: cover;
+	cursor: pointer;
+}
+
+.slide2{
+	position: absolute;
+	bottom: 30px;
+	left: 360px;
+	width: 250px;
+	height: 150px;
+	background: url(../image/CKNY2.jpg);
+	background-size: cover;
+	cursor: pointer;
+}
+.trailer{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	background: rgba(0,0,0,0.95);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+}
+.trailer.active{
+	visibility: visible;
+	opacity: 1;
+}
+
+.trailer video{
+	max-width: 900px;
+	outline: none;
+}
+.trailer .close{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+	filter: invert(1);
+	max-width: 32px;
+
+}
+@media (max-width: 360px){
+	header{
+		padding: 10px 25px;
+	}
+	header .logo
+	{
+		max-width: 80px;
+	}
+	header .toogle{
+		max-width: 40px;
+	}
+	.banner{
+		padding: 100px 50px;
+		background-position: left;
+	}
+	.banner .content h2{
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 1.3rem;
+	letter-spacing: 0.1rem;
+	color: white;
+	}
+
+	.banner .content p{
+	font-size: 1rem;
+	font-weight: 150;
+	}
+	.slide{
+	display: none;
+	}
+	.slide2{
+   display: none;
+	}
+	.play{
+	position: relative;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 1.2rem;
+}
+	.trailer video{
+		max-width: 80%;
+		outline: none;
+	}
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/57514e4b1c.js" crossorigin="anonymous"></script>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" href="sigin.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="forms-container">
+			<div class="login-signup">
+				<form action="" class="sign-in-form">
+					<h2 class="title">Login</h2>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="text" placeholder="Username" required="required"  id="nama"/>
+					</div>
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input type="password" placeholder="Password" required="required" id="password"/>
+					</div>
+					<input type="submit" value="Login" class="btn solid"  id="login" />
+
+					<p class="social-text">Or login with social platforms</p>
+					<div class="social-media">
+						<a href="" class="social-icon">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<a href="" class="social-icon">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="" class="social-icon">
+							<i class="fab fa-google"></i>
+						</a>
+
+					</div>
+				</form>
+
+				<!--sigin-->
+				<form action="" class="sign-up-form">
+					<h2 class="title">Sign up</h2>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input type="text" placeholder="Username" required="required" id="namesign" />
+					</div>
+					<div class="input-field">
+						<i class="far fa-envelope"></i>
+						<input type="email" placeholder="Email" required="required" id="email" />
+					</div>
+					<div class="input-field">
+						<i class="fas fa-lock"></i>
+						<input type="password" placeholder="Password" required="required" id="passwordsign" />
+					</div>
+					<input type="submit" value="Sigin up" class="btn solid" id="submit" />
+
+					<p class="social-text">Or Sigin-up with social platforms</p>
+					<div class="social-media">
+						<a href="" class="social-icon">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<a href="" class="social-icon">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="" class="social-icon">
+							<i class="fab fa-google"></i>
+						</a>
+
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<div class="panel-container">
+			<div class="panel left-panel">
+				<div class="content">
+					<h3>New here?</h3>
+					<p>Come join us for a fun movie watching experience
+					</p>
+					<button class="btn transparent" id="sign-up-btn">Sign up</button>
+				</div>
+
+				<img src="image/log.svg" class="image" alt="">
+			</div>
+			
+			<div class="panel right-panel">
+				<div class="content">
+					<h3>One of us?</h3>
+					<p>do you have an account? please fill it in the login form to enter the web
+					</p>
+					<button class="btn transparent" id="sign-in-btn">Login</button>
+				</div>
+				<img src="image/regis.svg" class="image" alt="">
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+	<script type="text/javascript">
+$(document).ready(function()
+{
+$("#login").click(function()
+{
+
+	var uid = $("#nama").val();
+	var password = $("#password").val();
+	
+	//checking for blank fields
+	if( uid =='' || password =='')
+		{
+		  $('input[type="text"],input[type="password"]').css("border","2px solid red");
+		  $('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
+		  alert("Please fill all fields...!!!!!!");
+		}
+	else if( uid != 'admin' && password != 'admin1234'){
+		  $('input[type="text"],input[type="password"]').css("border","2px solid red");
+		  $('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
+		  alert("password atau email salah");
+	}	
+    else 
+    {
+    	if ( password.length < 8 )
+    	{
+
+       	  $('input[type="password"]').css("border","2px solid red");
+		  $('input[type="password"]').css("box-shadow","0 0 3px red");
+			alert(  'password must be of minimum 8 characters');
+              $('#password').val('');
+    	}
+    	else {
+ 			alert("Selamat datang di web kami");
+			window.location.href= 'HomePage.html';
+			return false;
+
+		}   
+
+
+	 	 
+	}
+	});
+});
+	</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+      $('#submit').click(function(){
+        var name = $('#namesign').val();
+        var email = $('#email').val();
+        var password = $('#passwordsign').val();
+
+        if(name== ''){
+        $('input[type="text"]').css("border","2px solid red");
+        $('input[type="text"]').css("box-shadow","0 0 3px red");
+          return false;
+        }
+        else if(email== ''){
+        $('input[type="email"]').css("border","2px solid red");
+        $('input[type="email"]').css("box-shadow","0 0 3px red");
+          return false;
+        }
+        else if(password== ''){
+        $('input[type="password"]').css("border","2px solid red");
+        $('input[type="password').css("box-shadow","0 0 3px red");
+        return false;
+        }
+        if(IsEmail(email)==false){
+          alert("Email id is invalid");
+        $('input[type="email"]').css("border","2px solid red");
+        $('input[type="email"]').css("box-shadow","0 0 3px red");
+          return false;
+        }
+  });
+ });
+ function IsEmail(email) {
+  var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if(!regex.test(email)) {
+    return false;
+  }else{
+    return true;
+  }
+}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kimetsu No Yaiba Mugen Train</title>
+	<link rel="stylesheet" type="text/css" href="css/deskripsifilm.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><img src="image/IKNY.png"></a>
+		<div class="toogle"><a href="Anime.html"><img src="image/bckk.png"></a></div>
+	</header>
+	<div class="banner">
+		<div class="content">
+			<h2>He snatched my <span>FAMILY</span> from me</h2>
+			<p> Tanjiro memiliki keluarga yang bahagia walaupun serba kekurangn namun
+			keluarga kecilnya itu tetap dapat tersenyum lebar, tanjiro telah lama
+			ditinggalkan oleh ayahnya karena itu dia menjadi tulang punggung dengan 
+			berjualan arang namun pada malam yang dingin sesuatu telah mencuri segalanya
+			darinya.... </p>
+			<a href="#" class="play" onclick="toggle();"><img src="image/play.png">Watch Trailer</a>
+			<a href="https://drive.google.com/uc?export=download&id=1cO_uXRqoOouE_ykrU9D6-gQM2EauN8fR" class="play" ><img src="image/download.png">Download Movie</a>
+		</div>
+	</div>
+	<div class="slide"></div>
+	<div class="slide2"></div>
+	<div class="trailer">
+		<video src="video/kny.mp4" controls="true"></video>
+		<img src="image/close.png" class="close" onclick="toggle();">
+	</div>
+	<script type="text/javascript">
+		function toggle(){
+			var trailer = document.querySelector('.trailer');
+			var video = document.querySelector('video');
+			trailer.classList.toggle('active')
+			video.currentTime = 0;
+			video.pause();
+		}
+		function download(){
+			window.location.href = "https://www.google.com/" ;
+		}
+	</script>
+</body>
+</html>
