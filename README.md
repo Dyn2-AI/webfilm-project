@@ -2,19 +2,15 @@
 
 Sebuah proyek website streaming film sederhana yang dibangun dengan teknologi modern.
 
-![Demo Screenshot](https://via.placeholder.com/800x400?text=WebFilm+Demo) *(Ganti dengan gambar demo proyek)*
-
 ## Fitur ✨
 - 🎥 Streaming film & serial TV
-- 🔍 Pencarian judul film
+- 🔍 Pencarian judul film berdasarkan kategori
 - 📌 Kategori & rekomendasi
-- 💬 Ulasan pengguna (opsional)
+- 💬 Feddbacl
 
 ## Teknologi yang Digunakan 🛠️
-- **Frontend**: React.js / Vue.js / HTML+CSS+JS
-- **Backend**: Node.js (Express) / PHP / Python (Flask/Django)
-- **Database**: MySQL / Firebase / MongoDB
-- **Lainnya**: API TMDB (The Movie Database)
+- **Frontend**: HTML+CSS
+- **Backend*: JS
 
 ## Cara Instalasi ⚙️
 1. Clone repositori:
